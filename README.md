@@ -1,9 +1,9 @@
 # Mini_laravel_project
 Project Code: WST21-PM-2026-SF
-Student Name: lunzon, danver gee luis C.
-Course & Year: bsit-2 
-Database Used:SQLite
-Features:
+  Student Name: lunzon, danver gee luis C.
+  Course & Year: bsit-2 
+  Database Used:SQLite
+  Features:
 - Add Task
 - View Tasks
 - Edit Task
