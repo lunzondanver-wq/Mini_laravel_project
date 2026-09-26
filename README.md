@@ -1,12 +1,14 @@
-# Mini_laravel_project
+# Personal Task Manager
+
 Project Code: WST21-PM-2026-SF
 Student Name: Lunzon, Danver Gee Luis C.
-Course & Year: BSIT -2
-DATABASE USED: SQlite 
-  Features:
+Course & Year: BSIT 2nd Year
+Database Used: SQLite
+
+# Features
 - Add Task
 - View Tasks
 - Edit Task
 - Delete Task
 - Update Status
-- light and dark
+- Light and Dark mode
