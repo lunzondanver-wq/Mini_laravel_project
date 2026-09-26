@@ -1,6 +1,4 @@
 # Mini_laravel_project
-README.md
-Include this in your README.md:
 Project Code: WST21-PM-2026-SF
 Student Name: lunzon, danver gee luis C.
 Course & Year: bsit-2 
