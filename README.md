@@ -5,7 +5,7 @@ Student Name: Lunzon, Danver Gee Luis C.
 Course & Year: BSIT 2nd Year   
 Database Used: SQLite   
 
-# Features
+## Features
 - Add Task
 - View Tasks
 - Edit Task
