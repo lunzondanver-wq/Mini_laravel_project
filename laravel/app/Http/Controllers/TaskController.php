@@ -28,6 +28,7 @@ class TaskController extends Controller
             'task_name' => 'required|string|max:255',
             'description' => 'nullable|string',
             'status' => 'required|in:Pending,Completed',
+            'priority' => 'required|in:Low,Medium,High',
             'due_date' => 'nullable|date',
         ]);
 
@@ -47,6 +48,7 @@ class TaskController extends Controller
             'task_name' => 'required|string|max:255',
             'description' => 'nullable|string',
             'status' => 'required|in:Pending,Completed',
+            'priority' => 'required|in:Low,Medium,High',
             'due_date' => 'nullable|date',
         ]);
 

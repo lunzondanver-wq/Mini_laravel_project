@@ -49,11 +49,13 @@
                     <div class="flex items-center gap-3">
                         <p class="font-semibold text-slate-900 dark:text-white">{{ $task->task_name }}</p>
                         <span class="text-xs font-medium px-2 py-0.5 rounded-full
-                            {{ $task->status === 'Completed'
-                                ? 'bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400'
-                                : 'bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400' }}">
-                            {{ $task->status }}
-                        </span>
+    {{ match($task->priority) {
+        'High' => 'bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-400',
+        'Medium' => 'bg-yellow-100 dark:bg-yellow-900/40 text-yellow-700 dark:text-yellow-400',
+        default => 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300',
+    } }}">
+    {{ $task->priority }}
+</span>
                     </div>
                     @if ($task->description)
                         <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">{{ $task->description }}</p>

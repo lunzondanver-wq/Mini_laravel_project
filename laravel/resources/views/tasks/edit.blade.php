@@ -25,21 +25,29 @@
                       class="w-full border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg px-3 py-2">{{ old('description', $task->description) }}</textarea>
         </div>
 
-        <div class="grid grid-cols-2 gap-4">
-            <div>
-                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Status</label>
-                <select name="status" class="w-full border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg px-3 py-2">
-                    <option value="Pending" @selected(old('status', $task->status) === 'Pending')>Pending</option>
-                    <option value="Completed" @selected(old('status', $task->status) === 'Completed')>Completed</option>
-                </select>
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Due Date</label>
-                <input type="date" name="due_date"
-                       value="{{ old('due_date', optional($task->due_date)->format('Y-m-d')) }}"
-                       class="w-full border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg px-3 py-2">
-            </div>
-        </div>
+       <div class="grid grid-cols-3 gap-4">
+    <div>
+        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Status</label>
+        <select name="status" class="w-full border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg px-3 py-2">
+            <option value="Pending" @selected(old('status', $task->status) === 'Pending')>Pending</option>
+            <option value="Completed" @selected(old('status', $task->status) === 'Completed')>Completed</option>
+        </select>
+    </div>
+    <div>
+        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Priority</label>
+        <select name="priority" class="w-full border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg px-3 py-2">
+            <option value="Low" @selected(old('priority', $task->priority) === 'Low')>Low</option>
+            <option value="Medium" @selected(old('priority', $task->priority) === 'Medium')>Medium</option>
+            <option value="High" @selected(old('priority', $task->priority) === 'High')>High</option>
+        </select>
+    </div>
+    <div>
+        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Due Date</label>
+        <input type="date" name="due_date"
+               value="{{ old('due_date', optional($task->due_date)->format('Y-m-d')) }}"
+               class="w-full border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white rounded-lg px-3 py-2">
+    </div>
+</div>
 
         <button type="submit"
             class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5 rounded-lg">
